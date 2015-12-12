@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Image</th>
       <th>Title</th>
       <th>Url</th>
       <th>Description</th>
@@ -15,8 +16,10 @@
 
   <tbody>
     <% @news.each do |news| %>
-      <tr>
-        <td><%= news.title %></td>
+    <% image_object = LinkThumbnailer.generate(news.url) %>
+    <tr>    
+        <td><%= image_tag image_object.images.first.src.to_s, width: '50', height: '50' %></td>
+        <td><%= link_to news.title, news %></td>
         <td><%= news.url %></td>
         <td><%= news.description %></td>
         <td><%= news.content %></td>

@@ -30,6 +30,7 @@ gem 'devise'
 gem 'devise-bootstrap-views'
 gem 'metainspector'
 gem 'readability_parser'
+gem 'link_thumbnailer'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
