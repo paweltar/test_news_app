@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= @news.title %></strong>
+  <%= @news.description %>
+</p>
+<p>
+  <strong>Page Title:</strong>
+  <%= @page_mi.best_title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @page_mi.description %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= raw @page_rdb.content %>
+</p>
+
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>
